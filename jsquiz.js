@@ -108,11 +108,19 @@
             $('#question').remove()
             if (questionNumber > 0) {
                 var nextQuestion = createQuestionElement(questionNumber);
-                quiz.append(nextQuestion).fadeIn();
+                quiz.prepend(nextQuestion);
+                quiz.fadeIn();
                 $('#next').show();
             } else {
                 var scoreElem = displayScore();
-                quiz.append(scoreElem).fadeIn();
+                quiz.prepend(scoreElem);
+                quiz.fadeIn();
+                $('#campaign').show();
+                $('#prize1').show();
+                $('#prize2').show();
+                $('#prize3').show();
+                $('#prize4').show();
+                $('#prize5').show();
                 $('#next').hide();
                 $('#useful').show();
                 $('#unuseful').show();
@@ -145,7 +153,12 @@
         });
 
         score.append('Ви набрали балів: ' + pointsCounter + '. <br />' +
-            'Ваш результат: ' + result + '<br /><br /> Чи був цей тест корисний для вас?');
+            //'Ваш результат: ' + result + '<br /><br /> Чи був цей тест корисний для вас?');
+            'Ваш результат: ' + result + '<h2>Дайте відповідь ще на декілька питань та виграйте один з цінних призів!</h2> \
+                                    <br /> \
+                                    <div style="text-align: center;"> \
+                                        <a href="/campaign" class="btn btn-primary" role="button" style="width: 100%; font-size:20px;">Прийняти участь</a> \
+                                    </div>');
         return score;
     }
 
