@@ -154,11 +154,7 @@
 
         score.append('Ви набрали балів: ' + pointsCounter + '. <br />' +
             //'Ваш результат: ' + result + '<br /><br /> Чи був цей тест корисний для вас?');
-            'Ваш результат: ' + result + '<h2>Дайте відповідь ще на декілька питань та виграйте один з цінних призів!</h2> \
-                                    <br /> \
-                                    <div style="text-align: center;"> \
-                                        <a href="/campaign" class="btn btn-primary" role="button" style="width: 100%; font-size:20px;">Прийняти участь</a> \
-                                    </div>');
+            'Ваш результат: ' + result);
         return score;
     }
 
