@@ -1,0 +1,26 @@
+[10-Jul-2017 17:24:13 Europe/Kiev] PHP Fatal error:  Call to undefined function isEmail() in /home/gastroli/public_html/php/feedback.php on line 430
+[10-Jul-2017 17:26:28 Europe/Kiev] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.zoho.eu [Connection refused #111]' in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:269
+Stack trace:
+#0 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/gastroli/public_html/php/feedback.php(442): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php on line 269
+[10-Jul-2017 17:35:12 Europe/Kiev] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.zoho.eu [Connection refused #111]' in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:269
+Stack trace:
+#0 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/gastroli/public_html/php/feedback.php(443): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php on line 269
+[11-Jul-2017 12:45:42 Europe/Kiev] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host smtp.zoho.eu [Connection refused #111]' in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:269
+Stack trace:
+#0 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/gastroli/public_html/php/feedback.php(443): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /home/gastroli/public_html/php/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php on line 269
+[11-Jul-2017 19:57:32 Europe/Kiev] PHP Parse error:  syntax error, unexpected T_STRING in /home/gastroli/public_html/php/feedback.php on line 274
