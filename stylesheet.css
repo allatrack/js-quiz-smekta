@@ -4,6 +4,19 @@
     background-attachment: fixed;
 }
 
+.item-char li::before {
+    content: "•";
+    padding-right: 0.7em;
+    color: rgb(255, 116, 16);
+}
+
+.item-char{
+    list-style: none;
+    color: #666; 
+    font-weight: 300; 
+    font-size: 14px;
+}
+
 .wrapper {
     width: 1000px !important;
     padding: 0 !important;
