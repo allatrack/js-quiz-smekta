@@ -18,17 +18,44 @@
             return false;
         }
         
-        var postdata = $('#smektaSurvey').serialize();
+        var email = $('#email').val();
         $.ajax({
             type: 'POST',
-            url: '/php/feedback.php',
-            data: postdata,
-            datatype: 'json',
-            success: function(json) {
-                console.log('Email was sent succesfully');
+            url: '/php/check.php',
+            data: { "email": email },
+            datatype: 'text',
+            success: function(resp) {
+                if (resp.substring(0,5) == 'Succe') {
+                    var postdata = $('#smektaSurvey').serialize();
+                    // submitted=true;
+                    // action="https://docs.google.com/forms/d/e/1FAIpQLSfOFCkbnPbENUTxvCVQhL3F7KyXej0PIFR32IOvh5zFIibdVw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;"
+                    $.ajax({
+                        type: 'POST',
+                        url: '/php/feedback.php',
+                        data: postdata,
+                        datatype: 'json',
+                        success: function(json) {
+                            console.log('Email was sent succesfully');
+                        }
+                    });
+                    
+                    $.ajax({
+                        type: 'POST',
+                        url: '/php/gsuite.php',
+                        data: postdata,
+                        datatype: 'text',
+                        success: function(res) {
+                            console.log(res);
+                        }
+                    });
+                    $('#smektaSurvey').attr("onsubmit", "submitted=true;");
+                    $('#smektaSurvey').submit();
+                } else {
+                    bootbox.alert("Ви вже брали участь у розіграші. Слідкуйте за повідомленнями на вашій електронній пошті");
+                    return false;
+                }
             }
         });
-
     });
     $("#MedicineCheckboxes-6").change(function() {
         if (this.checked) {
