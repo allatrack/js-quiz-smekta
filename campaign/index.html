@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru" style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <title>ПРОЙДІТЬ ОПИТУВАННЯ</title>
+    <meta name="description" content="ПРОЙДІТЬ ОПИТУВАННЯ" />
+    <meta name="keywords" content="" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NK6W7J5');</script>
+
+</head>
+
+
+<body class="body" style="height: 100%;">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK6W7J5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--style>
+    	.body {
+			background: #ffcf03;
+			background: url(/img/brending_maket_2.jpg) center top no-repeat;
+    		background: url(/img/brending_maket_2.jpg) center top no-repeat, linear-gradient(to right, #ffcf03 50%, #EE595F 50%);
+    		background-attachment: fixed;
+    	}
+    </style-->
+    
+    <!-- Disclaimer Modal -->
+	<div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+	
+					<h3 class="modal-title" style="text-align: center; font-weight: 600; font-size: 18px; color: #ff7410;">Згода на обробку персональних даних</h5>
+					<!--button class="close" data-dismiss="modal" type="button">&nbsp;
+						<span>×</span>&nbsp;</button-->
+				</div>
+				<div class="modal-body">
+					<input type="checkbox" id="disclaimer-checkboxes-1">
+						Надаю згоду на обробку моїх персональний даних
+					</input>
+					<br />
+					<input type="checkbox" id="disclaimer-checkboxes-2">
+						Ознайомлений та погоджуюся з <a href="/rules.pdf">Правилами та умовами маркетингового дослідження</a>
+					</input>
+				</div>
+				<div class="modal-footer">
+					<!--button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button-->
+					<a class="btn btn-secondary" href="/campaign-intro">Не згоден</a>
+					<button class="btn btn-primary" id="disclaimer-submit">Пройти до опитування</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="wrapper" style="height: 100%;">
+		<div class="column test-col" style="height: 100%;">
+			<nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                  <a class="navbar-brand" href="/">
+                    <img alt="GastroGid" src="../logo.svg"/>
+                </a>                
+                </div>        
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                
+                <ul class="nav navbar-nav navbar-right">                          
+                  <li><a href="/pechiya">Печія</a></li>
+                  <li><a href="/kolit">Коліт</a></li>
+                  <li><a href="/metheorism">Метеоризм</a></li>
+                  <li><a href="/hastrit">Гастрит</a></li>
+                  <li><a href="/diarea">Діарея</a></li>                  
+                </ul>
+                </div>
+              </div>
+            </nav>
+			<div class="row nullable-margin" style="min-height: 100%; padding-top: 86px; margin-top: -86px; padding-bottom: 65px;">
+				<h1 class="title">Розіграш призів</h1>
+				<script type="text/javascript">
+					var submitted = false;
+				</script>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+				<form class="form-horizontal" id="smektaSurvey" action="#" method="POST" onsubmit="submitted=false;" onload="if(submitted) {window.location='/campaign-thanks';}" target="hidden_iframe">
+					<fieldset>
+
+						<!-- Form Name -->
+						<legend>Дайте відповідь на декілька простих питань та отримайте один з призів</legend>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="name">Залиште ваше ім'я:</label>
+							<div class="col-md-4">
+								<input id="name" name="entry.824630434" type="text" placeholder="Ім'я" class="form-control input-md" required>
+								<span class="help-block">Це потрібно щоб зв'язатись з вами у разі виграшу</span>
+							</div>
+						</div>
+
+						<!-- Multipleradio radio-customs -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="entry.1496283970">Вкажіть вашу стать:</label>
+							<div class="col-md-4">
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1496283970" id="SexRadios-0" value="Чоловіча" class="sr-only" required>
+									<label for="SexRadios-0">Чоловіча</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1496283970" id="SexRadios-1" value="Жіноча" class="sr-only" required>
+									<label for="SexRadios-1">Жіноча</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Multipleradio radio-customs -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="entry.1265115165">Вкажіть ваш вік:</label>
+							<div class="col-md-4">
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-0" value="До 16 років" class="sr-only" required>
+									<label for="AgeRadios-0">До 16 років</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-1" value="16-24 років" class="sr-only" required>
+									<label for="AgeRadios-1">16-24 років</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-2" value="25-34 років" class="sr-only" required>
+									<label for="AgeRadios-2">25-34 років</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-3" value="35-44 років" class="sr-only" required>
+									<label for="AgeRadios-3">35-44 років</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-4" value="45-55 років" class="sr-only" required>
+									<label for="AgeRadios-4">45-55 років</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1265115165" id="AgeRadios-5" value="Старше 55 років" class="sr-only" required>
+									<label for="AgeRadios-5">Старше 55 років</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Multipleradio radio-customs -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="entry.862803297">Вкажіть вашу зайнятість: </label>
+							<div class="col-md-4">
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.862803297" id="WorkRadios-0" value="Офісний працівник" class="sr-only" required>
+									<label for="WorkRadios-0">Офісний працівник</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.862803297" id="WorkRadios-1" value="Працюю поза офісом" class="sr-only" required>
+									<label for="WorkRadios-1">Працюю поза офісом</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.862803297" id="WorkRadios-2" value="Не працюю" class="sr-only" required>
+									<label for="WorkRadios-2">Не працюю</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.862803297" id="WorkRadios-3" value="Займаюся домашнім господарством" class="sr-only" required>
+									<label for="WorkRadios-3">Займаюся домашнім господарством</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.862803297" id="WorkRadios-4" value="Навчаюсь" class="sr-only" required>
+									<label for="WorkRadios-4">Навчаюсь</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Multiple Checkboxes -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="entry.1173885330">Які препарати від діареї ви купуєте для домашньої аптечки?</label>
+							<div class="col-md-4">
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-0" value="Смекта">
+									<label for="MedicineCheckboxes-0">Смекта</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-1" value="Сорбекс">
+									<label for="MedicineCheckboxes-1">Сорбекс</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-2" value="Атоксіл">
+									<label for="MedicineCheckboxes-2">Атоксіл</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-3" value="Імодіум">
+									<label for="MedicineCheckboxes-3">Імодіум</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-4" value="Лінекс">
+									<label for="MedicineCheckboxes-4">Лінекс</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-5" value="Ентерожерміна">
+									<label for="MedicineCheckboxes-5">Ентерожерміна</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-6" value="Не купую">
+									<label for="MedicineCheckboxes-6">Не купую</label>
+								</div>
+								<div class="checkbox checkbox-custom">
+									<input type="checkbox" name="entry.1173885330" id="MedicineCheckboxes-7" value="__other_option__">
+									<label for="MedicineCheckboxes-7">Інше</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group" id="otherMedicineText" style="display:none;">
+							<label class="col-md-4 control-label" for="OtherMedicine">Інше:</label>
+							<div class="col-md-4">
+								<input id="OtherMedicine" name="entry.1173885330.other_option_response" type="text" placeholder="" class="form-control input-md">
+							</div>
+						</div>
+
+						<!-- Multipleradio radio-customs -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="entry.1430636661">Як часто ви купуєте препарати від діареї?</label>
+							<div class="col-md-4">
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1430636661" id="FrequentlyRadios-0" value="Не купую" class="sr-only" required>
+									<label for="FrequentlyRadios-0">Не купую</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1430636661" id="FrequentlyRadios-1" value="1-3 рази на рік" class="sr-only" required>
+									<label for="FrequentlyRadios-1">1-3 рази на рік</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1430636661" id="FrequentlyRadios-2" value="1-3 рази за сезон" class="sr-only" required>
+									<label for="FrequentlyRadios-2">1-3 рази за сезон</label>
+								</div>
+								<div class="radio radio-custom">
+									<input type="radio" name="entry.1430636661" id="FrequentlyRadios-3" value="Частіше ніж 1 раз на місяць" class="sr-only" required>
+									<label for="FrequentlyRadios-3">Частіше ніж 1 раз на місяць</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Prepended text-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="email">Будь-ласка, залиште вашу електронну адресу для активації в промо кампанії:</label>
+							<div class="col-md-4">
+								<div class="input-group">
+									<span class="input-group-addon">Email</span>
+									<input id="email" name="entry.1395175042" class="form-control" placeholder="" type="text" required>
+								</div>
+								<p class="help-block">Це потрібно щоб зв'язатись з вами у разі виграшу.</p>
+							</div>
+						</div>
+
+						<!-- Button -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="submit"></label>
+							<div class="col-md-4">
+								<button id="submit" name="submit" class="btn btn-primary">Надіслати</button>
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+			<div class="row footer-nullable-margin footer">
+				© 2018 Gastro-gid. Всі права захищені <br/>
+				Використовуючи наш сайт Ви даєте згоду на обробку файлів cookie та користувацьких даних. Якщо Ви не бажаєте аби Ваші дані оброблялись, будь-ласка, залиште сайт.
+			</div>
+		</div>
+    </div>
+    <script type='text/javascript' src='/bootbox.min.js'></script>
+    <script type='text/javascript' src='/survey.js'></script>
+    <script>
+	$().ready(function() {
+		$("#disclaimer").modal({backdrop: 'static', keyboard: false});
+	})
+	$('#disclaimer-submit').click(function() {
+		if (($("#disclaimer-checkboxes-1:checkbox:checked").length > 0) && ($("#disclaimer-checkboxes-2:checkbox:checked").length > 0)) {
+			$('#disclaimer').modal('hide');
+		}
+	})
+    </script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '529597583904560'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=529597583904560&ev=PageView&noscript=1" /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</body>
+
+</html>
