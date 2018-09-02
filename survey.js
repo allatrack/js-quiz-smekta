@@ -50,6 +50,7 @@
                     });
                     $('#smektaSurvey').attr("onsubmit", "submitted=true;");
                     $('#smektaSurvey').submit();
+                    window.location='/campaign-thanks';
                 } else {
                     bootbox.alert("Ви вже брали участь у розіграші. Слідкуйте за повідомленнями на вашій електронній пошті");
                     return false;
@@ -57,7 +58,7 @@
             }
         });
     });
-    $("#MedicineCheckboxes-6").change(function() {
+    $("#MedicineCheckboxes-7").change(function() {
         if (this.checked) {
             $("#MedicineCheckboxes-0").attr('checked', false);
             $("#MedicineCheckboxes-1").attr('checked', false);
@@ -65,6 +66,7 @@
             $("#MedicineCheckboxes-3").attr('checked', false);
             $("#MedicineCheckboxes-4").attr('checked', false);
             $("#MedicineCheckboxes-5").attr('checked', false);
+            $("#MedicineCheckboxes-6").attr('checked', false);
 
             $("#MedicineCheckboxes-0").prop('disabled', true);
             $("#MedicineCheckboxes-1").prop('disabled', true);
@@ -72,6 +74,7 @@
             $("#MedicineCheckboxes-3").prop('disabled', true);
             $("#MedicineCheckboxes-4").prop('disabled', true);
             $("#MedicineCheckboxes-5").prop('disabled', true);
+            $("#MedicineCheckboxes-6").prop('disabled', true);
 
             $('#otherMedicineText').show();
         } else {
@@ -83,6 +86,7 @@
             $("#MedicineCheckboxes-3").prop('disabled', false);
             $("#MedicineCheckboxes-4").prop('disabled', false);
             $("#MedicineCheckboxes-5").prop('disabled', false);
+            $("#MedicineCheckboxes-6").prop('disabled', false);
         }
     });
 

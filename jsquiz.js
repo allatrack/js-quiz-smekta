@@ -7,7 +7,7 @@
     var quizQuestion = $('#quiz-question'); // Quiz question header
     var quizProgress = $("#quiz-progress-line"); // Quiz progress line
     var quizProgressText = $("#quiz-progress"); // Quiz progress text
-
+    
     // Display initial question
     displayNext(1);
     $('#start').hide();

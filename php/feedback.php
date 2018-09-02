@@ -232,36 +232,6 @@ $messageText = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" 
                 <div style="border-collapse: collapse;display: table;width: 100%;">
                     <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 620px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
 
-                    <!--[if (mso)|(IE)]><td align="center" width="620" style=" width:620px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="col num12" style="min-width: 320px;max-width: 620px;width: 620px;width: calc(30000% - 185380px);background-color: transparent;">
-                        <div style="background-color: transparent; width: 100% !important;">
-                            <!--[if (!mso)&(!IE)]><!-->
-                            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
-                                <!--<![endif]-->
-
-
-                                <div align="center" class="img-container center" style="padding-right: 0px;  padding-left: 0px;">
-                                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
-                                    <img class="center" align="center" border="0" src="http://gastro-likar.info/img/okok.gif" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 250px"
-                                        width="250">
-                                    <!--[if mso]></td></tr></table><![endif]-->
-                                </div>
-
-
-                                <!--[if (!mso)&(!IE)]><!-->
-                            </div>
-                            <!--<![endif]-->
-                        </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-                </div>
-            </div>
-        </div>
-        <div style="background-color:transparent;">
-            <div style="Margin: 0 auto;min-width: 320px;max-width: 620px;width: 620px;width: calc(31000% - 197780px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
-                <div style="border-collapse: collapse;display: table;width: 100%;">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 620px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
-
                     <!--[if (mso)|(IE)]><td align="center" width="620" style=" width:620px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
                     <div class="col num12" style="min-width: 320px;max-width: 620px;width: 620px;width: calc(30000% - 185380px);background-color: transparent;">
                         <div style="background-color: transparent; width: 100% !important;">
@@ -402,10 +372,15 @@ $messageText = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" 
 </html>';
 
 // CREATE TRANSPORT CONFIG
-$transport = Swift_SmtpTransport::newInstance('smtp.zoho.eu', 587, 'tls')
+$transport = Swift_SmtpTransport::newInstance('in-v3.mailjet.com', 587, 'tls')
+//$transport = Swift_SmtpTransport::newInstance('smtp.zoho.eu', 587, 'tls')
 //$transport = Swift_SmtpTransport::newInstance('smtp.zoho.eu', 465, 'ssl')
-  ->setUsername('hello@gastro-likar.info')
-  ->setPassword('');
+ // ->setUsername('hello@gastro-likar.info')
+ // ->setPassword('=767tobesy');
+ // ->setUsername('promo@gastrogid.com')
+ // ->setPassword('megra538');
+ ->setUsername('946bdd90fd1fd24f1b2ebe3e60e5fc9e')
+ ->setPassword('78ea0b7aa256a8b1e490dcebc3e5df77');
 
 
 function isEmail($email)
@@ -433,13 +408,21 @@ if ($_POST) {
       
     // Create a message
     $message = Swift_Message::newInstance('Вітаємо, ви зареєстровані в розіграші')
-    ->setFrom(array('hello@gastro-likar.info' => 'Розіграш Smekta'))
+    ->setFrom(array('promo@gastrogid.com' => 'promo@gastrogid.com'))
     ->setTo(array($emailTo))
     ->setBody($messageText, 'text/html');
 
     // SEND
     $mailer = Swift_Mailer::newInstance($transport);
     $mailer->send($message);    
+    
+    /*$message = Swift_Message::newInstance('Вітаємо, Користувач $emailTo зареєстрован в розіграші')
+    ->setFrom(array('promo@gastrogid.com' => 'promo@gastrogid.com'))
+    ->setTo(array('billing@smartsecurityapp.com'))
+    ->setBody($messageText, 'text/html');
+
+    // SEND
+    $mailer->send($message);*/
     
     echo json_encode($array);
     

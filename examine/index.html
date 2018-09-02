@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru" style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <title>Перевірте свій ШКТ</title>
+    <meta name="description" content="Перевірте свій ШКТ" />
+    <meta name="keywords" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+</head>
+
+
+<body class="body" style="height: 100%;">
+    <!--style>
+    	.body {
+    		background: #ffdd5f url(/img/brending_maket_1.jpg) center top no-repeat;
+    		background-attachment: fixed;
+    	}
+    </style-->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-101444163-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <div class="wrapper" style="height: 100%;">
+		<div class="column test-col" style="height: 100%;">
+			<div class="row nullable-margin">
+				<div class="menu">
+					<a href="/"><img src="../logo.svg" /></a>
+					<ul>
+						<li><a href="/pechiya">Печія</a></li>
+						<li><a href="/kolit">Коліт</a></li>
+						<li><a href="/metheorism">Метеоризм</a></li>
+						<li><a href="/hastrit">Гастрит</a></li>
+						<li><a href="/diarea">Діарея</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row nullable-margin" style="min-height: 100%; padding-top: 86px; margin-top: -86px; padding-bottom: 65px;">
+				<h1 class="title">Перевірте стан<br />свого шлунково-кишківного тракту</h1>
+				<p class="lead" id="quiz-progress">Пройдено 0%</p>
+				<div class="progress ">
+					<div class="progress-bar progress-bar-striped active" role="progressbar" id="quiz-progress-line" style="width: 0%; ">
+						<span class="sr-only" id="quiz-progress">Пройдено 0%</span>
+					</div>
+				</div>
+				<div class="panel panel-primary ">
+					<div class="panel-heading ">
+						<h3 class="panel-title " id="quiz-question">
+						</h3>
+					</div>
+					<div class="panel-body " id='quiz'>
+					</div>
+					<div class="panel-footer ">
+						<a href="#" class="btn btn-primary " role="button " id='next'>Наступне питання</a>
+						<!--a href="#" class="btn btn-default pull-right" role="button " id='start'>Пройти знову</a-->
+					</div>
+				</div>
+				<!--div class="row" id="campaign" style="text-align: left; font-weight: 600;  display: none; font-size: 16px; background: #ff7410; margin-right: -5px; margin-left: -5px;">
+					<div class="col-md-9">
+						<br />
+						<div class="landing-block-title" style="color: #fff; line-height: 80%; text-transform: none;"><a href="/campaign-intro" style="color: #fff;text-transform: none;font-size: 20px;">Бажаєте отримати цінний приз?<br /> Пройдіть опитування і візьміть участь у розіграші цінних призів.</a></div>
+						<br />
+					</div>
+					<div class="col-md-3" style="text-align: center;">
+						<br />
+						<a href="/campaign-intro" class="btn btn-default " role="button" style="padding: 10px 20px; border-radius: 20px; text-align: center;text-transform: uppercase;">Пройти опитування</a>
+						<br />
+					</div>
+				</div-->
+			</div>
+			<div class="row footer-nullable-margin footer">
+				© 2018 Gastro-gid. Всі права захищені <br/>
+				Використовуючи наш сайт Ви даєте згоду на обробку файлів cookie та користувацьких даних. Якщо Ви не бажаєте аби Ваші дані оброблялись, будь-ласка, залиште сайт.
+			</div>
+		</div>
+    </div>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src="/bootstrap.min.js"></script>
+    <script type='text/javascript' src='/bootbox.min.js'></script>
+    <script type="text/javascript">
+        var questions = [{
+            number: 1,
+            question: "Чи бувають у вас напади печії? ",
+            choices: [{
+                answer: "Так ",
+                nextQuestion: 2,
+                points: 1
+            }, {
+                answer: "Ні ",
+                nextQuestion: 5,
+                points: 0
+            }]
+        }, {
+            number: 2,
+            question: "Як часто вас турбує печія? ",
+            choices: [{
+                answer: "кожен день ",
+                nextQuestion: 3,
+                points: 4
+            }, {
+                answer: "періодично (1-2 рази на тиждень) ",
+                nextQuestion: 3,
+                points: 2
+            }, {
+                answer: "епізодично (1-3 рази на місяць) ",
+                nextQuestion: 3,
+                points: 1
+            }, {
+                answer: "в залежності від того що з 'їв (а)",
+                nextQuestion: 3,
+                points: 0
+            }]
+        }, {
+            number: 3,
+            question: "Чи бувають у вас ниючі болі в спині, напади болю за грудиною після прийому їжі?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 4,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 5,
+                points: 0
+            }]
+        }, {
+            number: 4,
+            question: "Ви прокидаєтеся вночі від бажання «перекусити»?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 5,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 5,
+                points: 0
+            }]
+        }, {
+            number: 5,
+            question: "Вас турбують часті хворобливі здуття живота?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 6,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 8,
+                points: 0
+            }]
+        }, {
+            number: 6,
+            question: "Здуття супроводжується болісними відчуттями в животі?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 7,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 8,
+                points: 0
+            }]
+        }, {
+            number: 7,
+            question: "Як часто?",
+            choices: [{
+                answer: "Після кожного прийому їжі",
+                nextQuestion: 8,
+                points: 2
+            }, {
+                answer: "Вночі",
+                nextQuestion: 8,
+                points: 2
+            }, {
+                answer: "Після фізичних навантажень",
+                nextQuestion: 8,
+                points: 1
+            }]
+        }, {
+            number: 8,
+            question: "Чи відзначали Ви стійкі, тривалі порушення стільця?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 9,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 10,
+                points: 0
+            }]
+        }, {
+            number: 9,
+            question: "Як ви опишете свій стілець?",
+            choices: [{
+                image: "/stool-scale/type01.png",
+                answer: "Окремі жорсткі шматки, схожі на горіхи. важко просувається.",
+                nextQuestion: 10,
+                points: 1
+            }, {
+                image: "/stool-scale/type02.png",
+                answer: "Ковбасоподібний, але кусковий. Діаметр більше ніж у 3 типу.",
+                nextQuestion: 10,
+                points: 0
+            }, {
+                image: "/stool-scale/type03.png",
+                answer: "Виглядає як ковбаса, але покритий тріщинами. Діаметр менше, ніж у 2 типу.",
+                nextQuestion: 10,
+                points: 0
+            }, {
+                image: "/stool-scale/type04.png",
+                answer: "Виглядає як італійська сосиска або змія. Гладкий і легко піддається тиску.",
+                nextQuestion: 10,
+                points: 0
+            }, {
+                image: "/stool-scale/type05.png",
+                answer: "М'які легко прохідні шматки, що розриваються. ",
+                nextQuestion: 10,
+                points: 1
+            }, {
+                image: "/stool-scale/type06.png",
+                answer: "Пухнасті частини з рваними краями. Пухкий, м 'який стілець.",
+                nextQuestion: 10,
+                points: 1
+            }, {
+                image: "/stool-scale/type07.png",
+                answer: "Рідкий, немає шматків. Повністю рідкий. ",
+                nextQuestion: 10,
+                points: 1
+            }]
+        }, {
+            number: 10,
+            question: "Чи турбує вас діарея і як часто?",
+            choices: [{
+                answer: "Так, кожен день, кілька разів на день.",
+                nextQuestion: 11,
+                points: 4
+            }, {
+                answer: "Так, періодично, але не довго.",
+                nextQuestion: 11,
+                points: 1
+            }, {
+                answer: "Так, іноді, знаю як і вмію з цим боротися.",
+                nextQuestion: 11,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 13,
+                points: 0
+            }]
+        }, {
+            number: 11,
+            question: "Під діареєю я розумію частий (більше 1 разу на добу), рідкий стілець.",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 12,
+                points: 0
+            }, {
+                answer: "Ні",
+                nextQuestion: 12,
+                points: 0
+            }]
+        }, {
+            number: 12,
+            question: "Чи помічали ви кров або слиз в калі?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 13,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 13,
+                points: 0
+            }]
+        }, {
+            number: 13,
+            question: "Чи зверталися ви за останній рік до гастроентеролога, проктолога чи терапевта зі скаргами на проблеми з боку шлунково-кишкового тракту?",
+            choices: [{
+                answer: "Так",
+                nextQuestion: 0,
+                points: 1
+            }, {
+                answer: "Ні",
+                nextQuestion: 0,
+                points: 0
+            }]
+        }];
+    </script>
+    <script type='text/javascript' src='/jsquiz.js'></script>
+    <script type='text/javascript' src='/wheel.js'></script>
+    <!--script type="text/javascript">
+        $( 'body' ).click( function ( e ) {
+            if ( this === e.target ) {
+                window.location.href = "https://www.smecta.ua/?utm_source=likarinfo&utm_medium=cpc&utm_campaign=brending_likarinfo&utm_term=brending_likarinfo&utm_content=brending_likarinfo ";
+            }
+        });
+    </script-->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '529597583904560'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=529597583904560&ev=PageView&noscript=1" /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</body>
+
+</html>
