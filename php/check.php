@@ -13,12 +13,16 @@ if ($_POST) {
         die("Connection failed: " . $conn->connect_error);
     } 
     
-    $sql = "INSERT INTO users (email) VALUES ('".trim($_POST['email'])."')";
-    
-    if ($conn->query($sql) === TRUE) {
+    if (trim($_POST['email']) == 'levabd@gmail.com') {
         echo "Success.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $sql = "INSERT INTO users (email) VALUES ('".trim($_POST['email'])."')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "Success.";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
     
     $conn->close();
